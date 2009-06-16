@@ -1,0 +1,30 @@
+<html><head>
+<title>hello from rails</title>
+<style>
+.Line0 { 
+    background-color: #e0f8f8;
+}
+.Line1 { 
+    background-color: #f8b0f8;
+}
+</style>
+</head>
+<body>
+<h2 class="Line1">Hello! from rails!</h2>
+<% 
+t = @time
+if t.sec.modulo(2)== 1 
+odd_or_even = 1
+else
+odd_or_even = 0
+end
+%>
+<h3>It's now <%= t %></h3>
+<p class="Line<%=odd_or_even%>">What's my colour? 
+I'm <%=odd_or_even %></p>
+<h3>What's your name? </h3>
+<form action ="hi" id ="nameForm">
+<input name = "name" type="input" />
+<input value="Send" type="submit"/></form>
+</body>
+</html>
